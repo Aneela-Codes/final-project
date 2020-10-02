@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Town's Grocery Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fashion.css">
+    <!-- <link rel="stylesheet" href="assessories.css"> -->
+</head>
+<body>
+    <header>
+        <div class="">
+          <div class="row top-bar">
+            <div class="col-lg-6 col-md-8 col-12 logo " id="logo-part">
+                <a class="navbar-brand" href="#"><img src="images/lg.png" alt=""></a>
+                <div class="tagline"><p>Your Neighbor's Grocery Store!</p> </div>
+                <form>
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  <i class="fas fa-search"></i>
+                </form>
+            </div>
+            <div class="col-lg-6 col-md-4 col-12 cart">          
+                    <div><i class="fas fa-shopping-cart"></i><span>CART</span></div>
+                    <div><i class="fas fa-heart"></i><span>Favourites</span> </div>
+                    <div> <i class="fas fa-user" onclick="openForm()"></i><span>Login</span> </div>
+                    <div id="menu-icon"><i class="fas fa-bars" onclick="openMenu()"></i></div>           
+    
+                </div>
+            </div>
+        </div>
+  
+      
+         <!-- --------------------------------NAVBAR STARTS----------------------------------- -->
+  
+          <nav> 
+            <i class="fas fa-chevron-right" onclick="closeMenu()" ><a href="javascript:void(0)"></a> </i>
+  
+            <ul>
+    
+                <li class="nav-item ">
+                  <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Cosmetics
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Gents Makeup</a>
+                    <a class="dropdown-item" href="#">Ladies Makeup</a>
+                  </div>
+                </li>
+                <li class="nav-item ">
+                    <!-- <a class="nav-link" href="#fashion">Fashion</a> -->
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Food
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Fruits</a>
+                        <a class="dropdown-item" href="#">Vegetables</a>
+                      </div>
+                  </li>
+                <li class="nav-item">
+                  <!-- <a class="nav-link" href="#electronics">Electronics</a> -->
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Fashion
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="gents.html">Gents</a>
+                    <a class="dropdown-item" href="ladies.html">Ladies</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                    <!-- <a class="nav-link" href="#accessories">Accessories</a> -->
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Electronics
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="Smartgadgets/smartGadgets.html">Smart Gadgets</a>
+                        <a class="dropdown-item" href="homeGadgets/homeGadgets.html">Home Gadgets</a>
+                      </div>
+                  </li>
+                  <li class="nav-item">
+                    <!-- <a class="nav-link" href="#Testimonials">Testimonials</a> -->
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Accessories
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="jewellery.html">Jewellery</a>
+                        <a class="dropdown-item" href="handbags.html">handbags</a>
+                      </div>
+                  </li>
+        </ul>
+    </nav>
+      </header>
+  
+        <!-- ----------------------------FORM STARTS-------------------------------------- -->
+      
+      <div class="form-bg">
+        <div class="container">
+            <div class="form-box">
+                <i class="fas fa-window-close" onclick="closeForm()"></i>
+
+                <div class="button-box">
+                    <div id="btn"></div>
+                    <button type="button" class="toggle-btn" onclick="login()">Login</button>
+                    <button type="button" class="toggle-btn" onclick="signUp()">Sign In</button>
+                </div>
+                <div class="social-icons">
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-instagram-square"></i>
+                    <i class="fab fa-linkedin"></i>
+                </div>
+                <form action="" class="input-group" id="login">
+                    <input type="text" class="input-field" placeholder="Username" required>
+                    <input type="password" class="input-field" placeholder="Password" required>
+                    <input type="checkbox" class="check-box" placeholder="Password" required> <span>Remember password</span>
+                    <button type="submit" id="submit-btn">Login</button>
+                </form>
+    
+                <form action="" class="input-group" id="sign-up">
+                    <input type="text" class="input-field" placeholder="Username" required>
+                    <input type="email" class="input-field" placeholder="Email" required>
+                    <input type="password" class="input-field" placeholder="Password" required>
+                    <input type="password" class="input-field" placeholder="Confirm Password" required>
+                    <input type="checkbox" class="check-box" required> <span>I agree to terms</span>
+                    <button type="submit" id="submit-btn">Sign Up</button>
+                </form>
+            </div>
+            
+        </div>
+    
+      </div>
+
+        <!-- ----------------------------FORM ENDS----------------------------------------- -->
+
+      <!-- -----------------------------------------------------------CAROUSEL--------------------------------------------------- -->
+      <div class="carousel-bg" id="home">
+        <div class="container">
+            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card">
+                            <div class="path text-uppercase">Home / <a>Products </a></div>
+                            <div class="row">
+                                <div class="col-md-6 text-center align-self-center">
+                                    <img src="images/veg1.jpeg" alt="" class="img-fluid" id="slider-img">
+                                </div>
+                                <div class="col-md-6 info">
+                                    <div class="row title mb-2">
+                                        <div class="col-md-9 col-12">
+                                            <h1>Food Corner</h1>
+                                            <p>All types of things are here that you require</p>
+                                        </div>
+                                        <div class="col-md-3 col-12 text-right">
+                                            <a href="#"><i class="fas fa-heart"></i></a>
+                                        </div>
+                                    </div>
+                                    <i class="fas fa-star checked"></i>
+                                    <i class="fas fa-star checked"></i>
+                                    <i class="fas fa-star checked"></i>
+                                    <i class="fas fa-star checked"></i>
+                                    <i class="fas fa-star-half-alt checked"></i>
+                                    <span id="reviews">233435 Reviews</span>
+                                    <div class="row prices">
+                                        <label for="pro" class="radio">
+                                            <input type="radio" name="product" value="Vegetables"  id="pro" checked>
+                                            <span>
+                                                <div class="row">
+                                                    <big><b>Fresh Vegetables</b></big>
+                                                </div>
+                                                <div class="row">
+                                                    Rs. 1500
+                                                </div>
+                                            </span>
+                                        </label>
+
+                                        <label for="pro1" class="radio">
+                                            <input type="radio" name="product" value="Vegetables" id="pro1">
+                                            <span>
+                                                <div class="row">
+                                                    <big><b>Fresh/Frozen Meat</b></big>
+                                                </div>
+                                                <div class="row">
+                                                    Rs. 1500
+                                                </div>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row lower">
+                                <div class="col">
+                                    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button"
+                                        data-slide="prev">
+                                        <i class="fas fa-arrow-left"></i>
+
+                                    </a>
+                                    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button"
+                                        data-slide="next">
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                                <!-- <div class="col text-right align-self-center">
+                                    <button class="btn">Add To Cart</button>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- -------------------------------------- -->
+                    <div class="carousel-item ">
+                        <div class="card">
+                            <div class="path text-uppercase">Home / Products / <a>Slider</a></div>
+                            <div class="row">
+                                <div class="col-md-6 text-center align-self-center">
+                                    <img src="images/kurti.jpeg" alt="" class="img-fluid" id="slider-img1">
+                                </div>
+                                <div class="col-md-6 info">
+                                    <div class="row title mb-2">
+                                        <div class="col-md-9 col-12">
+                                            <h1>Ladies and Gents</h1>
+                                            <p>All types of things are here that you require</p>
+                                        </div>
+                                        <div class="col-md-3 col-12 text-right">
+                                            <a href="#"><i class="fas fa-heart"></i></a>
+                                        </div>
+                                    </div>
+                                    <i class="fas fa-star checked"></i>
+                                    <i class="fas fa-star checked"></i>
+                                    <i class="fas fa-star checked"></i>
+                                    <i class="fas fa-star checked"></i>
+                                    <i class="fas fa-star-half-alt checked"></i>
+                                    <span id="reviews">233435 Reviews</span>
+                                    <div class="row prices">
+                                        <label for="pro2" class="radio">
+                                            <input type="radio" name="product1" value="Vegetables"  id="pro2" checked>
+                                            <span>
+                                                <div class="row">
+                                                    <big><b>Ladies Corner</b></big>
+                                                </div>
+                                                <div class="row">
+                                                    Rs. 2500
+                                                </div>
+                                            </span>
+                                        </label>
+
+                                        <label for="pro3" class="radio">
+                                            <input type="radio" name="product1" value="Vegetables" id="pro3">
+                                            <span>
+                                                <div class="row">
+                                                    <big><b>Gents Corner</b></big>
+                                                </div>
+                                                <div class="row">
+                                                    Rs. 1500
+                                                </div>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row lower">
+                                <div class="col">
+                                    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button"
+                                        data-slide="prev">
+                                        <i class="fas fa-arrow-left"></i>
+
+                                    </a>
+                                    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button"
+                                        data-slide="next">
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="path text-uppercase">Home / Products / <a>Slider</a></div>
+                            <div class="row">
+                                <div class="col-md-6 text-center align-self-center">
+                                    <img src="images/apple1.jpeg" alt="" class="img-fluid" id="slider-img2">
+                                </div>
+                                <div class="col-md-6 info">
+                                    <div class="row title mb-2">
+                                        <div class="col-md-9 col-12">
+                                            <h1>Electronics</h1>
+                                            <p>Get all the Gadgets on a feasible amount</p>
+                                        </div>
+                                        <div class="col-md-3 col-12 text-right">
+                                            <a href="#"><i class="fas fa-heart"></i></a>
+                                        </div>
+                                    </div>
+                                    <i class="fas fa-star checked"></i>
+                                    <i class="fas fa-star checked"></i>
+                                    <i class="fas fa-star checked"></i>
+                                    <i class="fas fa-star checked"></i>
+                                    <i class="fas fa-star-half-alt checked"></i>
+                                    <span id="reviews">233435 Reviews</span>
+                                    <div class="row prices">
+                                        <label for="pro4" class="radio">
+                                            <input type="radio" name="product2" value="Vegetables" checked id="pro4">
+                                            <span>
+                                                <div class="row">
+                                                    <big><b>Latest Gadgets</b></big>
+                                                </div>
+                                                <div class="row">
+                                                    Rs. 1500
+                                                </div>
+                                            </span>
+                                        </label>
+
+                                        <label for="pro5" class="radio">
+                                            <input type="radio" name="product2" value="Vegetables" id="pro5">
+                                            <span>
+                                                <div class="row">
+                                                    <big><b>Second Hand Sets</b></big>
+                                                </div>
+                                                <div class="row">
+                                                    Rs. 1500
+                                                </div>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row lower">
+                                <div class="col">
+                                    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button"
+                                        data-slide="prev">
+                                        <i class="fas fa-arrow-left"></i>
+
+                                    </a>
+                                    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button"
+                                        data-slide="next">
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div></div>
+        <!-- -------------------------------------------ELECTRONICS STARTS---------------------------------/ -->
+        <section class="container" id="electronics">
+          <h1 class="product-heading">Gadgets</h1>
+          <div class="index-caption">
+            
+            <p >
+                Our products are inspired by the people and world around us. Beautiful, high quality goods that
+                are designed especially for you. Discover our story and meet the people that make our brand what it is.
+            </p>
+        </div>
+            <!-- 4 cards -->
+            <div class="row row-cols-1 row-cols-md-2">
+              <div class="col mb-4">
+                <div class="card">
+                  <img
+                    src="images/smart.jpg"
+                    class="card-img-top"
+                    alt="..."  
+                    onclick="Gents()" ....
+                  />
+                  <div class="card-img-overlay">
+                    <a class="card-title text-center" href="Smartgadgets/smartGadgets.html">Smart Gadgets</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col mb-4">
+                <div class="card">
+                  <img
+                    src="images/homeG2.PNG" 
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-img-overlay">
+                    <a class="card-title text-center" href="homeGadgets/homeGadgets.html">Home Gadgets</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 4 cards end-->
+        </section>
+
+        <!-- -------------------------------------------ELECTRONICS ENDS---------------------------------/ -->
+        <!-- -------------------------------------------ASSESSORIES STARTS---------------------------------/ -->
+
+
+          <section class="container" id="assesories">
+          <h1 class="product-heading">Assessories</h1>
+              
+        <div class="index-caption">
+            
+            <p >
+                Our products are inspired by the people and world around us. Beautiful, high quality goods that
+                are designed especially for you. Discover our story and meet the people that make our brand what it is.
+            </p>
+        </div>
+        <div class="row categories">
+            <!-- <div class="row" id="categories"></div> -->
+          
+                  <div class="col mb-4">
+                    <div class="card">
+                      <img
+                        src="images/handbags.jpg"
+                        class="card-img-top"
+                        alt="..."  
+                        onclick="Gents()" ....
+                      />
+                      <div class="card-img-overlay">
+                        <a class="card-title text-center" href="handbags.html">Handbags</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col mb-4">
+                    <div class="card">
+                      <img
+                        src="images/jewellery.jpeg" 
+                        class="card-img-top"
+                        alt="..."
+                      />
+                      <div class="card-img-overlay">
+                        <a class="card-title text-center" href="jewellery.html">Jwellery</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 4 cards end-->
+              </section>
+
+        
+
+    <!-- -------------------------------------------ASSESSORIES ENDS---------------------------------/ -->
+
+
+        <!-- -------------------FASHION STARTS---------------------- -->
+
+        <section class="container" id="fashion">
+          <h1 class="product-heading">Fashion</h1>
+          <div class="index-caption">           
+            <p >
+                Our products are inspired by the people and world around us. Beautiful, high quality goods that
+                are designed especially for you. Discover our story and meet the people that make our brand what it is.
+            </p>
+        </div>
+            <!-- 4 cards -->
+            <div class="row row-cols-1 row-cols-md-2">
+              <div class="col mb-4">
+                <div class="card">
+                  <img
+                    src="images/gents-fashion.jpeg"
+                    class="card-img-top"
+                    alt="..."  
+                    onclick="Gents()" ....
+                  />
+                  <div class="card-img-overlay">
+                    <a class="card-title text-center" href="gents.html">Gents</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col mb-4">
+                <div class="card">
+                  <img
+                    src="images/ladies-fashion.jpg" 
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-img-overlay">
+                    <a class="card-title text-center" href="ladies.html">Ladies</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 4 cards end-->
+        </section>
+
+        <!-- -------------------FASHION ENDS---------------------- -->
+
+
+
+
+       
+       <footer>
+           <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="about-us">
+                        <h3>About Town's Grocery</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo ipsa adipisci, deleniti neque saepe beatae veniam dolore accusamus aspernatur qui!</p>
+                   
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="social-media-links">
+                        <h3>Quick Links</h3>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Cosmetics</a></li>
+                        <li><a href="#">Food</a></li>
+                        <li><a href="#">Fashion</a></li>
+                        <li><a href="#">Electronics</a></li>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-12 mx-auto">
+                    <div class="social-media-icons">
+                        <h3>Connect</h3>
+                        <span><i class="fab fa-facebook-square"></i></span>
+                        <span><i class="fab fa-instagram-square"></i></span>
+                        <span><i class="fab fa-linkedin"></i></span>
+                        <span><i class="fab fa-whatsapp-square"></i></span>
+                       
+                    </div>
+                    <div class="newsletter">
+                        <h4>Newsletter</h4>
+                       <input type="email"placeholder="Email"> <button type="submit">Send</button>
+                    </div>
+             </div>
+             <p class="mx-auto">Copyrights &copy 2020 reserved to Team Kalam, Tech Karo</p> 
+           </div>          
+           </div>
+       </footer>
+        <script src="script/script.js"></script>
+        <script src="script/electronics.js"></script>
+        <!-- <script src="JSON.js"></script> -->
+
+        
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  </body>
+</html>
